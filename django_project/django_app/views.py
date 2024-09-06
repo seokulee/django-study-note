@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from django.http import HttpResponse, HttpResponseNotFound, Http404, HttpResponseRedirect
+from django.urls import reverse
 
 NOT_FOUND_MSG = "Not Found Topic"
 
@@ -26,7 +27,7 @@ def num_page_view(request, num_page):
     except IndexError:
         return HttpResponseNotFound(NOT_FOUND_MSG)
 
-    return HttpResponseRedirect(topic)
+    return HttpResponseRedirect(reverse('topic-page', args=[topic]))
 
 
 # # dynamic view
