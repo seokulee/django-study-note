@@ -1,9 +1,16 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-# Create your views here.
-def index(request):
-    return HttpResponse("Hello! This is a view inside django app")
+articles = {
+    'sports':'Sports Page',
+    'finance':'Finance Page',
+    'politics':'Politics Page',
+}
 
-def simple_view(request):
-    return HttpResponse("Simple view")
+# Create your views here.
+def news_view(request, topic):
+    return HttpResponse(articles[topic])
+
+# dynamic view
+def add_views(request, num1, num2):
+    return HttpResponse(f'{num1} + {num2} = {num1 + num2}')
