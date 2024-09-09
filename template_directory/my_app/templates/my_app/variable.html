@@ -1,15 +1,23 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <title>Document</title>
 </head>
 <body>
     <h1>VARIABLE.HTML</h1>
     <h2>Hi {{ first_name | upper }} {{ last_name | capfirst }}</h2>
-    <h2>in list { some_list }} index 0 is {{ some_list.0 }}</h2>
-    <h2>{{ some_dict }} {{ some_dict.inside_key }}</h2>
-    <h2>{# THIS IS A DJANGO TEMPLATE COMMENT #}</h2>
+    {# <h2>in list { some_list }} index 0 is {{ some_list.0 }}</h2> #}
+    <ul>
+    {% for item in some_list %}
+        <li>{{ item }}</li>
+    {% endfor %}
+    </ul>
+    {% for k, v in some_dict.items %}
+        <p> {{ k }} : {{ v }} </p>
+    {% endfor %}
+    {# <h2>{{ some_dict }} {{ some_dict.inside_key }}</h2> #}
+    {# THIS IS A DJANGO TEMPLATE COMMENT #}
     <!-- THIS IS HTML COMMENT -->
 </body>
 </html>
