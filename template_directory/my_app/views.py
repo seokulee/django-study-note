@@ -14,6 +14,7 @@ def variable_view(request):
         ],
         'some_dict': {
             'inside_key': 'inside_value',
-        }
+        },
+        'user_logged_in': True,
     }
     return render(request, 'my_app/variable.html', context=my_var)

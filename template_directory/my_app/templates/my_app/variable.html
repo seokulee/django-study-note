@@ -16,6 +16,12 @@
     {% for k, v in some_dict.items %}
         <p> {{ k }} : {{ v }} </p>
     {% endfor %}
+
+    {% if user_logged_in %}
+        <p>USER {{ first_name }} LOGGED IN</p>
+    {% else %}
+        <p>USER LOGGED OUT</p>
+    {% endif %}
     {# <h2>{{ some_dict }} {{ some_dict.inside_key }}</h2> #}
     {# THIS IS A DJANGO TEMPLATE COMMENT #}
     <!-- THIS IS HTML COMMENT -->
