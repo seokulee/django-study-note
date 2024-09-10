@@ -1,5 +1,5 @@
 """
-URL configuration for template_directory project.
+URL configuration for template_exercise project.
 
 The `urlpatterns` list routes URLs to views. For more information please see:
     https://docs.djangoproject.com/en/4.2/topics/http/urls/
@@ -22,4 +22,4 @@ urlpatterns = [
     path('my_app/', include('my_app.urls')),
 ]
 
-handler404 = 'template_directory.views.my_custom_page_not_found_view'
+handler404 = 'template_exercise.views.my_custom_page_not_found_view'

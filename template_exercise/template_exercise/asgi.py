@@ -1,5 +1,5 @@
 """
-ASGI config for template_directory project.
+ASGI config for template_exercise project.
 
 It exposes the ASGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.asgi import get_asgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'template_directory.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'template_exercise.settings')
 
 application = get_asgi_application()
