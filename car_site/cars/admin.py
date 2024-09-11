@@ -3,6 +3,10 @@ from cars.models import Car
 
 # Register your models here.
 class CarAdmin(admin.ModelAdmin):
-    pass
+    fieldsets = [
+        ('TIME INFORMATION', {'fields': ['year']}),
+        ('CAR INFORMATION', {'fields': ['brand']}),
+    ]
+
 
 admin.site.register(Car, CarAdmin)
